@@ -6,7 +6,7 @@ function DataList() {
 
   useEffect(() => {
     // Aquí puedes hacer una solicitud a la API y almacenar los datos en el estado
-    Axios.get('https://api.example.com/data')
+    Axios.get('https://anime-facts-rest-api.herokuapp.com/api/v1')
       .then(response => {
         setData(response.data);
       })
@@ -20,7 +20,7 @@ function DataList() {
       <h1>Lista de Datos</h1>
       <ul>
         {data.map(item => (
-          <li key={item.id}>{item.name}</li>
+          <li key={item.anime_id}>{item.anime_name}</li>
         ))}
       </ul>
     </div>
